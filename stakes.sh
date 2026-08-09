@@ -62,9 +62,9 @@ function fetch {
 }
 
 function plot {
-    source "$CMD_SCRIPT/bin/activate" \
-	&& "$CMD_SCRIPT/stakes.py" -g \
-	&& "$CMD_SCRIPT/stakes.py" ;
+    source "$CMD_SCRIPT/bin/activate" ;
+   "$CMD_SCRIPT/stakes.py" -g || true ;
+   "$CMD_SCRIPT/stakes.py" || true ;
 }
 
 function commit {

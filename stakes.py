@@ -3,10 +3,18 @@
 
 import argparse
 import json
-import matplotlib.pyplot as pp
 import numpy as np
 import os
 import re
+import sys
+
+if '-s' not in sys.argv and \
+    '--show' not in sys.argv:
+
+    import matplotlib
+    matplotlib.use('Agg')
+
+import matplotlib.pyplot as pp
 
 from datetime import date
 from typing import List, Dict, Tuple, Any
